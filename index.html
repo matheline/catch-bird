@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catch Bird — Safari Photo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <span class="brand">Catch Bird</span>
+  <span>Focale <b id="hFocal">50 mm</b></span>
+  <span>Focus <b id="hFocus">8.0 m</b></span>
+  <span>Vitesse <b id="hShutter">1/60 s</b></span>
+  <span>Graines <b id="hSeeds">10</b></span>
+  <span>Photos <b id="hCount">0</b></span>
+  <span class="record">Record <b id="hBest">—</b></span>
+</div>
+
+<div id="hint">Souris : viser &nbsp;·&nbsp; Molette : zoom &nbsp;·&nbsp; W/S : focus &nbsp;·&nbsp; A : autofocus &nbsp;·&nbsp; Clic/Espace : photo &nbsp;·&nbsp; G : graines &nbsp;·&nbsp; Tab : galerie</div>
+
+<div id="flash"></div>
+
+<button id="galBtn" type="button">Galerie (Tab)</button>
+
+<aside id="gallery">
+  <h2>Galerie</h2>
+  <p class="galEmpty" id="galEmpty">Aucune photo pour le moment.</p>
+  <div id="thumbs"></div>
+</aside>
+
+<div id="modal">
+  <div id="modalBox">
+    <img id="modalImg" alt="photo">
+    <div id="modalInfo"></div>
+    <button id="modalClose" type="button">Fermer (Échap)</button>
+  </div>
+</div>
+
+<div id="start">
+  <div id="startBox">
+    <h1>Catch Bird</h1>
+    <p class="sub">Safari photo : photographiez les oiseaux de la vallée sans les effrayer.</p>
+    <ul>
+      <li><b>Souris</b> — viser</li>
+      <li><b>Molette</b> — zoom (focale)</li>
+      <li><b>W / S</b> ou <b>↑ / ↓</b> — mise au point manuelle</li>
+      <li><b>A</b> — autofocus sur l'oiseau visé</li>
+      <li><b>Clic</b> ou <b>Espace</b> — prendre la photo</li>
+      <li><b>G</b> puis clic au sol — poser des graines pour attirer les oiseaux</li>
+      <li><b>Tab</b> — ouvrir la galerie</li>
+    </ul>
+    <p class="warn">Attention : de trop grands mouvements de souris effraient les oiseaux, ils s'envolent !</p>
+    <p class="scoreInfo">Le score dépend du cadrage, de la mise au point, du flou de mouvement, de la rareté de l'espèce et de sa pose.</p>
+    <button id="startBtn" type="button">Commencer</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
